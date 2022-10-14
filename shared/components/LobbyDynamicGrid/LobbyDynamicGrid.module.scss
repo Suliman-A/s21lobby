@@ -1,0 +1,58 @@
+@import "src/shared/styles/global";
+
+.grid {
+    display: grid;
+    gap: rem(3);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.buttons {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+}
+
+.button {
+    color: rgba($color-grey, 0.44);
+    transition: 0.25s ease;
+    @include resetButton;
+    &.active {
+        color: $color-grey;
+    }
+    &Icon {
+        width: rem(30);
+        height: rem(30);
+        fill: currentColor;
+        pointer-events: none;
+    }
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &Wrapper {
+        background-color: $color-dark-grey;
+        padding-block: rem(11);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.44);
+        margin-bottom: rem(6);
+    }
+}
+
+.heading {
+    color: $color-white;
+    font-size: rem(18);
+    text-transform: uppercase;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+    text-align: center;
+    font-weight: 400;
+    &Icon {
+        fill: currentColor;
+        width: rem(20);
+        height: rem(20);
+    }
+}

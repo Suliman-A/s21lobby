@@ -1,0 +1,37 @@
+@import "src/shared/styles/global";
+
+.otp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(8);
+    width: 100%;
+}
+
+.refresh {
+    &Button {
+        @include resetButton;
+        width: rem(18);
+        height: rem(18);
+    }
+    &Icon {
+        fill: $color-white;
+        transform-origin: center center;
+        transition: transform 0.25s ease;
+    }
+}
+
+.inline {
+    display: inline-flex;
+    gap: rem(10);
+}
+
+.input {
+    width: rem(20);
+    :global(.MuiInputBase-input) {
+        text-align: center;
+        font-weight: 700;
+        font-size: rem(24);
+        padding: 0;
+    }
+}

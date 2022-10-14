@@ -1,0 +1,55 @@
+@import "src/shared/styles/global";
+
+.card {
+    font-size: 1em;
+    border: thin solid $color-grey;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-dark-grey;
+    cursor: pointer;
+    position: relative;
+    &:nth-child(odd) {
+        border-radius: em(4) 0;
+    }
+    &:nth-child(even) {
+        border-radius: 0 em(4);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background-color: rgba($color-black, 0.15);
+        z-index: 2;
+        pointer-events: none;
+    }
+}
+
+.button {
+    @include resetButton;
+    background: rgba(146, 248, 255, 0.44);
+    box-shadow: 0px 0.166666667em 0.166666667em rgba(10, 10, 20, 0.3);
+    border-radius: 0.333333333em;
+    font-weight: 700;
+    font-size: em(12);
+    text-shadow: 0px 1px 1px rgba(10, 10, 20, 0.44);
+    position: absolute;
+    bottom: 0.833333333em;
+    right: 0.833333333em;
+    color: $color-white;
+    padding: 0.666666667em 1.666666667em;
+    line-height: 1;
+    opacity: 0;
+    visibility: hidden;
+    @supports (backdrop-filter: blur(rem(4))) {
+        backdrop-filter: blur(rem(4));
+    }
+    &:before {
+        content: "";
+        inset: 0;
+        background: rgba(255, 255, 255, 0.24);
+        z-index: -1;
+        position: absolute;
+        border-radius: inherit;
+    }
+}

@@ -1,0 +1,15 @@
+@import "src/shared/styles/global";
+
+.success {
+    display: flex;
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+    &Icon {
+        width: rem(96);
+        height: rem(96);
+        fill: currentColor;
+    }
+}

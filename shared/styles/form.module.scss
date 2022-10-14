@@ -1,0 +1,85 @@
+@import "src/shared/styles/global";
+
+.form {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    color: $color-white;
+    :global(.MuiInputBase-input) {
+        height: auto;
+        color: $color-white;
+        border-radius: 0;
+        border-bottom: 1px solid currentColor;
+        font-family: $font-rubik;
+        font-size: rem(16);
+        line-height: 1;
+    }
+    :global(.MuiInputBase-root){
+        border-radius: 0;
+    }
+    :global(.MuiTextField-root){
+        border-radius: 0;
+    }
+    :global(.MuiInputBase-root:before),
+    :global(.MuiInputBase-root:after) {
+        display: none;
+    }
+    :global(.MuiInputLabel-formControl) {
+        font-family: $font-rubik;
+        z-index: 1;
+        font-size: rem(14);
+        line-height: 1;
+        color: $color-white !important;
+        pointer-events: none;
+        top: rem(-17);
+    }
+    :global(label + .MuiInput-formControl) {
+        margin-top: 0;
+    }
+    :global(.MuiInputLabel-shrink) {
+        transform: translate(0, rem(9)) scale(0.75);
+    }
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    gap: rem(20);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: rem(100);
+    gap: rem(20);
+    width: 100%;
+}
+
+.error {
+    color: $color-primary;
+    display: block;
+    font-size: rem(12);
+    margin-top: rem(7);
+}
+
+.message {
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.label {
+    font-size: rem(14);
+    line-height: 1;
+    color: $color-white;
+}

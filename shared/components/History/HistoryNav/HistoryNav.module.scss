@@ -1,0 +1,114 @@
+@import "src/shared/styles/global";
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(19);
+    margin-bottom: rem(4);
+    padding: 0 rem(5);
+    user-select: none;
+}
+
+.itemWrapper{
+    gap: rem(15);
+    display: flex;
+}
+
+.itemPair{
+    display: flex;
+    font-size: rem(12);
+
+    .pairNavPlayer, .pairNavBanker{
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        gap: rem(4);
+        padding-right: rem(5);
+    }
+
+    .pairPlayer, .pairNavBanker{
+        color: $color-white;
+        text-align: center;
+    }
+
+    .pairBanker{
+        background-color: rgba(191, 0, 0, 1);
+            margin: unset !important;
+            border: thin solid $board-color-banker;
+            padding: rem(3) rem(3) rem(1);
+        }
+
+    .pairPlayer{
+        background-color: rgba(0, 111, 255, 1);
+        margin: unset !important;
+        padding: rem(3) rem(3) rem(1);
+        border: thin solid $board-color-player;
+    }
+
+    .signs{
+        display: flex;
+        align-items: center;
+        color: $color-dark;
+        width: max-content;
+        padding: unset;
+        gap: rem(4);
+
+        .pairIcon{
+            width: rem(12);
+            height: rem(12);
+        }
+        
+        span{
+            margin: unset;
+            padding-top: rem(2);
+            font-size: rem(12);
+        }
+
+        .pairCircleBanker{
+            background: $board-color-banker;
+            width: rem(10);
+            height: rem(10);
+            border-radius: 100%;
+        }
+
+        .pairCirclePlayer{
+            background: $board-color-player;
+            width: rem(10);
+            height: rem(10);
+            border-radius: 100%;
+        }
+
+        .pairLineBanker{
+            margin: unset;
+            font-size: rem(10);
+            padding-top: rem(2);
+            color: $board-color-banker;
+        }
+
+        .pairLinePlayer{
+            margin: unset;
+            color: $board-color-player;
+            padding-top: rem(2);
+            font-size: rem(10);
+        }
+    }
+}
+
+.item {
+    display: flex;
+    gap: rem(4);
+    align-items: center;
+}
+
+.icon {
+    width: rem(16);
+    height: rem(16);
+}
+
+.text {
+    font-weight: 500;
+    color: $color-white;
+    font-family: $font-barlow;
+    font-size: rem(12);
+}

@@ -1,0 +1,21 @@
+@import "src/shared/styles/global";
+
+.header {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    gap: rem(9);
+    margin-bottom: rem(12);
+}
+
+.icon {
+    width: rem(20);
+    height: rem(20);
+    fill: currentColor;
+}
+
+.heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: rem(18);
+}

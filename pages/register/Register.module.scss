@@ -1,0 +1,8 @@
+@import "src/shared/styles/global";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
+}

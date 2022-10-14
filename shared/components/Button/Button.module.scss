@@ -1,0 +1,15 @@
+@import "src/shared/styles/global";
+
+.button {
+    @include resetButton;
+    color: $color-dark-grey;
+    background-color: $color-primary;
+    border-radius: rem(4);
+    min-width: rem(216);
+    font-size: rem(18);
+    line-height: 1;
+    font-weight: 700;
+    padding: rem(13) rem(10);
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+@import "src/shared/styles/global";
+
+.button {
+    @include iconButton;
+}
+
+.active {
+    color: $color-white;
+}
+
+.icon {
+    width: rem(24);
+    height: rem(24);
+}

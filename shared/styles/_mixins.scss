@@ -1,0 +1,242 @@
+@import "./variables";
+
+@mixin fluid-size-w($properties, $min-vw, $max-vw, $min-size, $max-size) {
+  @each $property in $properties {
+    #{$property}: $min-size;
+  }
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(
+        #{$min-size} +
+          #{strip-unit($max-size - $min-size)} *
+          (100vw - #{$min-vw}) /
+          #{strip-unit($max-vw - $min-vw)}
+      );
+    }
+  }
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-size;
+    }
+  }
+}
+
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@function em($value) {
+  $emValue: calc($value / 16) + em;
+  @return $emValue;
+}
+
+@mixin fluid-size-h($properties, $min-vw, $max-vw, $min-size, $max-size) {
+  @each $property in $properties {
+    #{$property}: $min-size;
+  }
+  @media (min-height: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(
+        #{$min-size} +
+          #{strip-unit($max-size - $min-size)} *
+          (100vh - #{$min-vw}) /
+          #{strip-unit($max-vw - $min-vw)}
+      );
+    }
+  }
+  @media (min-height: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-size;
+    }
+  }
+}
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@mixin resetButton {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin volumeSettingIcon {
+  position: absolute;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-60%);
+
+  svg {
+    fill: $color-white;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@mixin iconButton {
+  @include resetButton;
+  color: $color-grey;
+  cursor: pointer;
+  svg {
+    fill: currentColor;
+  }
+}
+
+@mixin iconButtonDark {
+  @include resetButton;
+  color: $color-dark-grey;
+  cursor: pointer;
+  svg {
+    fill: currentColor;
+  }
+}
+
+@mixin board-progress-shape {
+  width: calc(var(--tie-width) / 2 + 0.125rem);
+  position: absolute;
+  height: rem(22);
+  background-color: $color-black;
+  border: thin solid currentColor;
+  top: rem(6);
+  z-index: 0;
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: rem(-24);
+    width: $board-circle-size;
+    height: $board-circle-size;
+    background-color: $color-black;
+    border: thin solid currentColor;
+    border-radius: 50%;
+  }
+}
+
+@mixin board-tie-shape {
+  position: absolute;
+  background-color: $color-black;
+  bottom: 0;
+  border: thin solid currentColor;
+  border-bottom: 0;
+  top: em(35);
+  // width: $board-shape-width;
+  width: calc(var(--tie-width) / 2 + 0.125rem);
+}
+
+@mixin percent {
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 0.5;
+  small {
+    font-size: 0.583333333em;
+  }
+}
+
+@mixin board-player {
+  background: $board-bg-player;
+}
+
+@mixin board-banker {
+  background: $board-bg-banker;
+}
+
+@mixin board-tie {
+  background: $board-bg-tie;
+}
+
+@mixin board-neutral {
+  background: $board-bg-neutral;
+}
+
+/* player board blink animation */
+@keyframes board-player {
+  0% {
+    background: $board-color-blink-player;
+  }
+
+  25% {
+    background: $board-bg-player;
+  }
+
+  50% {
+    background: $board-color-blink-player;
+  }
+
+  75% {
+    background: $board-bg-player;
+  }
+
+  100% {
+    background: $board-color-blink-player;
+  }
+}
+
+@mixin blink-board-player {
+  animation: board-player 3s ease;
+}
+
+/* tie board blink animation */
+@keyframes board-tie {
+  0% {
+    background: $board-color-blink-tie;
+  }
+
+  25% {
+    background: $board-bg-tie;
+  }
+
+  50% {
+    background: $board-color-blink-tie;
+  }
+
+  75% {
+    background: $board-bg-tie;
+  }
+
+  100% {
+    background: $board-color-blink-tie;
+  }
+}
+
+@mixin blink-board-tie {
+  animation: board-tie 3s ease;
+}
+
+/* banker board blink animation */
+@keyframes board-banker {
+  0% {
+    background: $board-color-blink-banker;
+  }
+
+  25% {
+    background: $board-bg-banker;
+  }
+
+  50% {
+    background: $board-color-blink-banker;
+  }
+
+  75% {
+    background: $board-bg-banker;
+  }
+
+  100% {
+    background: $board-color-blink-banker;
+  }
+}
+
+@mixin blink-board-banker {
+  animation: board-banker 3s ease;
+}

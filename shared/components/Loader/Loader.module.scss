@@ -1,0 +1,56 @@
+@import "src/shared/styles/global";
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    position: fixed;
+    background-color: rgba($color-black, 0.7);
+    z-index: 9998;
+    backdrop-filter: blur(3px);
+}
+.loader {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(160);
+    height: rem(158);
+    path {
+        transform-origin: center center;
+    }
+}
+
+// .circle {
+//     position: absolute;
+//     width: rem(100);
+//     height: rem(100);
+//     background-color: $color-primary;
+//     border-radius: 50%;
+//     border-radius: 50%;
+//     inset: 0;
+//     margin: auto;
+//     &:nth-of-type(1) {
+//         animation: pulse 1.5s infinite;
+//     }
+//     &:nth-of-type(2) {
+//         animation: pulse 1.5s infinite 0.25s;
+//     }
+//     &:nth-of-type(3) {
+//         animation: pulse 1.5s infinite 0.6s;
+//     }
+// }
+
+// @keyframes pulse {
+//     0% {
+//         transform: scale(0.1);
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 0.4;
+//     }
+//     100% {
+//         transform: scale(1.6);
+//         opacity: 0;
+//     }
+// }

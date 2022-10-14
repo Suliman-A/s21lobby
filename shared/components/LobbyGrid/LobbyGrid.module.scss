@@ -1,0 +1,8 @@
+@import "src/shared/styles/global";
+
+.grid {
+    display: grid;
+    gap: rem(6);
+    grid-template-columns: repeat(3, 1fr);
+    flex-grow: 1;
+}

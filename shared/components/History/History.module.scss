@@ -1,0 +1,8 @@
+@import "src/shared/styles/global";
+
+.container {
+    font-size: rem(16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

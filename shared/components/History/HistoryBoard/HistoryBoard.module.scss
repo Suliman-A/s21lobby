@@ -1,0 +1,68 @@
+@import "src/shared/styles/global";
+
+.container {
+    border-radius: rem(4);
+    color: $color-light-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.paddedOutside {
+        padding: rem(6);
+        border-radius: rem(4);
+        background-color: $color-white;
+    }
+}
+
+.grid {
+    padding: {
+        right: rem(1);
+        bottom: rem(1);
+    }
+}
+
+.row {
+    display: grid;
+    width: 100%;
+    position: relative;
+    background-color: $color-white;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    font-size: rem(14);
+    align-items: center;
+    justify-content: center;
+    border: thin solid currentColor;
+    margin: {
+        right: rem(-1);
+        bottom: rem(-1);
+    }
+    &.padded {
+        padding: rem(1);
+    }
+    &.hidden {
+        display: none;
+    }
+    &:before {
+        content: "";
+        padding-top: 100%;
+    }
+}
+
+.text {
+    font-size: rem(5);
+    color: $color-white;
+    font-family: $font-barlow;
+    font-weight: 400;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}

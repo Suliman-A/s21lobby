@@ -1,0 +1,56 @@
+$font-rubik: "Rubik", sans-serif;
+$font-barlow: "Barlow", sans-serif;
+$font-barlow-cond: "Barlow Condensed", sans-serif;
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-dark: #0a0a14;
+$color-grey: #9c9cac;
+$color-dark-grey: #3e3e4b;
+$color-dark-grey-2: #171821;
+$color-light-grey: #d6d6e0;
+$color-primary: #92f8ff;
+$color-bar: #0d494d;
+$color-gold: #ffde4f;
+$color-cyan: #00FFDA;
+
+$gradient-gold-text: linear-gradient(127.07deg, #BF953F 12.7%, #FCF6BA 32.1%, #F0D18E 49.6%, #BF953F 67.87%, #F0D18E 85.75%);
+
+$text-shadow: 0 3px 4px rgba( #000, 0.45);
+
+$border-red: rgb(255, 0, 0);
+$border-blue: rgb(0, 148, 255);
+$border-green: rgb(38, 255, 103);
+
+$background-dark: rgba(10, 10, 20, 0.66);
+$background-red: rgba(255, 0, 0, .95);
+$background-blue: rgba(0, 148, 255, .95);
+$background-green: rgba(38, 255, 103, .95);
+
+$board-color-player: #4495ff;
+$board-color-blink-player: linear-gradient(180deg, rgba($board-color-player, .5) 0.72%, rgba(0, 111, 255, 0.1232) 100%);
+$board-bg-player: linear-gradient(180deg, rgba(0, 111, 255, 0.28) 0%, rgba(0, 111, 255, 0.1232) 100%);
+$board-bg-player-hover: linear-gradient(180deg, rgba(0, 111, 255, 0.52) 0%, rgba(0, 111, 255, 0.1232) 100%);
+$board-color-banker: #ff0707;
+$board-color-blink-banker: linear-gradient(180deg, rgba($board-color-banker, .5) 0.72%, rgba(191, 0, 0, 0.1232) 100%);
+$board-bg-banker: linear-gradient(  180deg, rgba(191, 0, 0, 0.28) 0.72%, rgba(191, 0, 0, 0.1232) 100%);
+$board-bg-banker-hover: linear-gradient(180deg, rgba(191, 0, 0, 0.52) 0.72%, rgba(191, 0, 0, 0.1232) 100%);
+$board-color-tie: #26ff67;
+$board-color-blink-tie: linear-gradient(180deg, rgba($board-color-tie, .5) 0.72%, rgba(0, 174, 52, 0.1232) 100%);
+$board-bg-tie: linear-gradient(180deg, rgba(0, 174, 52, 0.28) 0%, rgba(0, 174, 52, 0.1232) 100%);
+$board-bg-tie-hover: linear-gradient(180deg, rgba(0, 174, 52, 0.52) 0%, rgba(0, 174, 52, 0.1232) 100%);
+$board-color-neutral: #82cfe8;
+$board-color-blink-neutral: linear-gradient(180deg, rgba($board-color-neutral, .5) 0.72%, rgba(130, 207, 232, 0.1232) 100%);
+$board-bg-neutral: linear-gradient(180deg, rgba(130, 207, 232, 0.28) 0%, rgba(130, 207, 232, 0.1232) 100%);
+$board-bg-neutral-hover: linear-gradient(180deg, rgba(130, 207, 232, 0.52) 0%, rgba(130, 207, 232, 0.1232) 100%);
+$board-bg-gradient-jackorat: linear-gradient(0deg, #F39943,#F16A4A, #EE2F52);
+
+$board-middle-els-padding: 3.5625em;
+$board-radius: 0.625em;
+$board-gap: 0.125em;
+$board-shape-width: 24.76%;
+$board-circle-size: 1.375rem;
+$board-circle-position: -0.75rem;
+
+$slider-button-width: 1.125em;
+$slider-button-height: 11.375em;

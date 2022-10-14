@@ -1,0 +1,74 @@
+@import "src/shared/styles/variables";
+@import "src/shared/styles/mixins";
+
+body .__react_component_tooltip {
+    color: #d6d6e0;
+    border-radius: rem(8);
+    background: $color-dark-grey-2;
+    font-size: rem(14);
+    text-transform: uppercase;
+    padding: rem(8) rem(10);
+    @supports (backdrop-filter: blur(rem(10))) {
+        backdrop-filter: blur(rem(10));
+    }
+    &.show {
+        opacity: 1;
+    }
+    &.place {
+        &-top:after {
+            border-top-color: $color-dark-grey-2;
+        }
+        &-bottom:after {
+            border-bottom-color: $color-dark-grey-2;
+        }
+        &-left:after {
+            border-left-color: $color-dark-grey-2;
+        }
+        &-right:after {
+            border-right-color: $color-dark-grey-2;
+        }
+    }
+}
+
+/*
+* ============ JS add classList here =================
+*/ 
+
+.html-swipe-none{
+    touch-action: none !important;
+}
+
+body.swipeUpHeight{
+    height: calc(100vh + 75px);  
+}
+  
+body.gameHeight{
+    height: var(--app-height);
+    overflow: hidden !important;
+    position: absolute;
+    display: grid;
+    place-content:center;
+    width:100%;
+}
+
+// Safari gameLayout style
+.isSafari{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: calc(100vh - 1px) !important;
+  }
+
+.rootSafari{
+    min-width: 375px;
+}
+  
+// Other browser gameLayout style
+.isOtherBrowser{
+    display: grid;
+    height: 100%;
+}
+
+.rootOtherBrowser{
+    max-width: 375px;
+}

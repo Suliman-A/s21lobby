@@ -1,0 +1,8 @@
+@import "src/shared/styles/global";
+
+.container {
+    padding: rem(3);
+    background-color: $color-black;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
